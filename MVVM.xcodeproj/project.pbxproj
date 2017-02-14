@@ -78,16 +78,14 @@
 		5971A5EB1E411BA0003C271F /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				59DF33061E538E460014B772 /* View Controllers */,
+				59DF33051E538E210014B772 /* App Delegate */,
 				59BCEBDC1E526F0200CEEDAD /* ViewModels */,
 				59BCEBD91E526E5B00CEEDAD /* Protocols */,
 				59BCEBD21E526A9B00CEEDAD /* Views */,
 				5971A5FE1E411BA7003C271F /* Models */,
-				5971A5EC1E411BA0003C271F /* AppDelegate.swift */,
-				5971A5EE1E411BA0003C271F /* ViewController.swift */,
-				5971A5F01E411BA0003C271F /* Main.storyboard */,
-				5971A5F31E411BA0003C271F /* Assets.xcassets */,
-				5971A5F51E411BA0003C271F /* LaunchScreen.storyboard */,
-				5971A5F81E411BA0003C271F /* Info.plist */,
+				59DF33081E538E5C0014B772 /* Resources */,
+				59DF33071E538E560014B772 /* Supporting Files */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -115,6 +113,8 @@
 		59BCEBD21E526A9B00CEEDAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5971A5F01E411BA0003C271F /* Main.storyboard */,
+				5971A5F51E411BA0003C271F /* LaunchScreen.storyboard */,
 				59DF32F91E5367620014B772 /* PictureCell.xib */,
 				59DF32FB1E536B880014B772 /* PasswordCell.xib */,
 				59DF32FD1E536B940014B772 /* InputCell.xib */,
@@ -145,6 +145,38 @@
 			);
 			name = Frameworks;
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		59DF33051E538E210014B772 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5971A5EC1E411BA0003C271F /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		59DF33061E538E460014B772 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5971A5EE1E411BA0003C271F /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		59DF33071E538E560014B772 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5971A5F81E411BA0003C271F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59DF33081E538E5C0014B772 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5971A5F31E411BA0003C271F /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
