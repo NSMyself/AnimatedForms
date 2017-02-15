@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="64" id="FWQ-8w-BTc"/>
                                     <constraint firstAttribute="width" constant="64" id="fff-8S-jHh"/>
                                 </constraints>
-                                <state key="normal" title="Swap">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -42,7 +42,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="swap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOr-bC-ABs"/>
+                                    <action selector="next" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0g-Iw-mvl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-l5-PMw">
+                                <rect key="frame" x="16" y="583" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="ggv-MI-OZ2"/>
+                                    <constraint firstAttribute="width" constant="64" id="wF4-4c-rzr"/>
+                                </constraints>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prev" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0k-9M-4kX"/>
+                                    <action selector="swap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bap-oh-N4y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,7 +71,9 @@
                             <constraint firstItem="g7Y-GD-ZbA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2yO-o8-tk8"/>
                             <constraint firstItem="g7Y-GD-ZbA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fw2-NP-zfP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EjO-Ie-v75" secondAttribute="bottom" constant="20" id="Jba-Jy-43k"/>
+                            <constraint firstItem="uh1-l5-PMw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XCe-Sh-m4G"/>
                             <constraint firstItem="g7Y-GD-ZbA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZXH-ip-paG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uh1-l5-PMw" secondAttribute="bottom" constant="20" id="dJr-e4-oUe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EjO-Ie-v75" secondAttribute="trailing" id="fs2-CT-VYR"/>
                             <constraint firstItem="g7Y-GD-ZbA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="y26-ql-BqW"/>
                         </constraints>

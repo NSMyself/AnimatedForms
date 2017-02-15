@@ -10,19 +10,12 @@ import UIKit
 import SwiftLCS
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    // Form types
-    let form1 = [Field.picture]
-    let form2 = [Field.input, Field.password]
-    
-    var currentForm:[Field] = []
     
     @IBOutlet weak var tableView: UITableView!
     
+    var formVM = FormViewModel()
+    
     override func viewDidLoad() {
-        
-        currentForm = form1
-        
         tableView.delegate = self
         tableView.dataSource = self
         registerFormComponents()
@@ -30,10 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Form Components
     func registerFormComponents() {
-        
-        let combined = Set<String>((form1 + form2).map { $0.rawValue})
-        
-        combined.forEach {
+        formVM.reuseIdentifiers().forEach {
             self.tableView.register(UINib(nibName: $0, bundle: nil), forCellReuseIdentifier: $0)
         }
     }
@@ -44,26 +34,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentForm.count
+        return formVM.activeForm().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: currentForm[indexPath.row].rawValue, for: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: formVM.activeForm()[indexPath.row].rawValue, for: indexPath)
     }
     
     // MARK: - Swap form
-    @IBAction func swap(_ sender: Any) {
-            
-        let diff = form1.diff(form2)
-    
-        let added = diff.addedIndexes.map { IndexPath(row: $0, section: 0) }
-        let removed = diff.removedIndexes.map { IndexPath(row: $0, section: 0) }
-    
-        currentForm = form2
+    func swap(step i:Int) {
+        
+        let (added, removed) = formVM.swap(step: i)
+        
         tableView?.beginUpdates()
         tableView?.insertRows(at: added, with: .fade)
         tableView?.deleteRows(at: removed, with: .fade)
         tableView?.endUpdates()
+    }
+    
+    @IBAction func next() {
+        swap(step: 1)
+    }
+    
+    @IBAction func prev() {
+        swap(step: -1)
     }
 }
 

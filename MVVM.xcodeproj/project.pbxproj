@@ -23,6 +23,8 @@
 		59DF32FC1E536B880014B772 /* PasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DF32FB1E536B880014B772 /* PasswordCell.xib */; };
 		59DF32FE1E536B940014B772 /* InputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DF32FD1E536B940014B772 /* InputCell.xib */; };
 		59DF33041E53883C0014B772 /* SwiftLCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DF33031E53883C0014B772 /* SwiftLCS.framework */; };
+		59DF330A1E5394770014B772 /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DF33091E5394770014B772 /* FormManager.swift */; };
+		59DF330C1E53964B0014B772 /* FormErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DF330B1E53964B0014B772 /* FormErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		59DF32FB1E536B880014B772 /* PasswordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordCell.xib; sourceTree = "<group>"; };
 		59DF32FD1E536B940014B772 /* InputCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputCell.xib; sourceTree = "<group>"; };
 		59DF33031E53883C0014B772 /* SwiftLCS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftLCS.framework; path = Carthage/Build/iOS/SwiftLCS.framework; sourceTree = SOURCE_ROOT; };
+		59DF33091E5394770014B772 /* FormManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
+		59DF330B1E53964B0014B772 /* FormErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,8 @@
 		5971A5EB1E411BA0003C271F /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				59DF33061E538E460014B772 /* View Controllers */,
 				59DF33051E538E210014B772 /* App Delegate */,
+				59DF33061E538E460014B772 /* View Controllers */,
 				59BCEBDC1E526F0200CEEDAD /* ViewModels */,
 				59BCEBD91E526E5B00CEEDAD /* Protocols */,
 				59BCEBD21E526A9B00CEEDAD /* Views */,
@@ -93,9 +97,11 @@
 		5971A5FE1E411BA7003C271F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5971A6011E411C0B003C271F /* Form.swift */,
 				5971A5FF1E411BB2003C271F /* Field.swift */,
+				5971A6011E411C0B003C271F /* Form.swift */,
+				59DF33091E5394770014B772 /* FormManager.swift */,
 				59BCEBD11E526A9200CEEDAD /* Cells */,
+				59DF330B1E53964B0014B772 /* FormErrors.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -273,10 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5971A5EF1E411BA0003C271F /* ViewController.swift in Sources */,
+				59DF330A1E5394770014B772 /* FormManager.swift in Sources */,
 				59BCEBD81E526B0800CEEDAD /* PasswordCell.swift in Sources */,
 				5971A6021E411C0B003C271F /* Form.swift in Sources */,
 				59BCEBDE1E526F1100CEEDAD /* FormViewModel.swift in Sources */,
 				59BCEBD41E526AA700CEEDAD /* PictureCell.swift in Sources */,
+				59DF330C1E53964B0014B772 /* FormErrors.swift in Sources */,
 				5971A5ED1E411BA0003C271F /* AppDelegate.swift in Sources */,
 				59BCEBDB1E526E6400CEEDAD /* FormCell.swift in Sources */,
 				59BCEBD61E526AE200CEEDAD /* InputCell.swift in Sources */,
