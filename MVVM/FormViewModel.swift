@@ -11,7 +11,7 @@ import Foundation
 struct FormViewModel {
 
     let login = [Field.picture]
-    let registration = [Field.input, Field.password]
+    let registration = [Field.input, Field.password, Field.picture]
     var forms:FormManager
     
     init() {

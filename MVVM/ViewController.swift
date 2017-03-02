@@ -16,8 +16,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var formVM = FormViewModel()
     
     override func viewDidLoad() {
+        
         tableView.delegate = self
         tableView.dataSource = self
+    
+        tableView.sectionHeaderHeight = 0
+        tableView.estimatedSectionHeaderHeight = UITableViewAutomaticDimension
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
+        
+        tableView.sectionFooterHeight = 0
+        tableView.estimatedSectionFooterHeight = UITableViewAutomaticDimension
+        
         registerFormComponents()
     }
     
