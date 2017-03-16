@@ -10,20 +10,31 @@ import Foundation
 
 struct FormViewModel {
 
-    let login = [Field.picture]
-    let registration = [Field.input, Field.password, Field.picture]
-    var forms:FormManager
+    static let mapper:[FieldKind:String] = [.textInput: "InputCell", .passwordInput: "PasswordCell"]
+    
+    let login = Form([.textInput])
+    let registration = Form([.textInput, .passwordInput])
+    
+    var forms:[Form]
+    var currentlyActive = 0
     
     init() {
-        forms = FormManager(components: [login, registration])
+        forms = [login, registration]
     }
     
-    func activeForm() -> [Field] {
-        return forms.active()
+    func active() -> Form {
+        return forms[currentlyActive]
     }
     
     func reuseIdentifiers() -> [String] {
-        return forms.components.reduce([], +).map { $0.rawValue }
+        
+        var tmp:[[FieldKind]] = []
+        
+        for form in forms {
+            tmp.append(form.rawFields)
+        }
+    
+        return Array(tmp.joined()).flatMap { FormViewModel.mapper[$0] }
     }
     
     mutating func swap(step i:Int) -> ([IndexPath], [IndexPath]) {

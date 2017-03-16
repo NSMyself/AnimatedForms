@@ -45,11 +45,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return formVM.activeForm().count
+        return formVM.active().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: formVM.activeForm()[indexPath.row].rawValue, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: formVM.active()[indexPath.row].rawValue, for: indexPath)
+        let viewModel = formVM.active()
     }
     
     // MARK: - Swap form

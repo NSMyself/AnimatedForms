@@ -35,7 +35,7 @@
                 <constraints>
                     <constraint firstItem="V7b-0Q-fi8" firstAttribute="centerX" secondItem="0fy-WN-gdi" secondAttribute="centerX" id="XCz-hQ-eZ6"/>
                     <constraint firstItem="V7b-0Q-fi8" firstAttribute="centerY" secondItem="0fy-WN-gdi" secondAttribute="centerY" id="ZvL-jt-hd5"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="V7b-0Q-fi8" secondAttribute="bottom" constant="9" id="fhR-os-Cc5"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="V7b-0Q-fi8" secondAttribute="bottom" constant="10" id="fhR-os-Cc5"/>
                     <constraint firstItem="V7b-0Q-fi8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0fy-WN-gdi" secondAttribute="topMargin" constant="10" id="pcD-UQ-D4d"/>
                 </constraints>
             </tableViewCellContentView>
